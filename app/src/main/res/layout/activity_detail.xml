@@ -13,14 +13,16 @@
 
             <ImageView
                 android:id="@+id/iv_backdrop"
-                android:layout_width="0dp"
+                android:layout_width="400dp"
                 android:layout_height="wrap_content"
                 android:contentDescription="@string/todo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_poster_image"
-                tools:ignore="VectorDrawableCompat" />
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_launcher_background"
+                tools:ignore="VectorDrawableCompat"
+                tools:src="@drawable/ic_poster_image"/>
 
             <TextView
                 android:id="@+id/tv_title_detail"

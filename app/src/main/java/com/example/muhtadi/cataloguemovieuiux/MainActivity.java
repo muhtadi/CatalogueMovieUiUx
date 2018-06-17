@@ -1,8 +1,10 @@
 package com.example.muhtadi.cataloguemovieuiux;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -10,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.example.muhtadi.cataloguemovieuiux.MyFragment.SearchFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -29,6 +33,14 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        if (savedInstanceState == null){
+            Fragment currentFragment = new SearchFragment();
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.content_main,currentFragment)
+                    .commit();
+        }
     }
 
     @Override
@@ -68,12 +80,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
+        Fragment fragment = null;
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
-//
-//        } else if (id == R.id.nav_slideshow) {
+        if (id == R.id.nav_nowplaying) {
+
+        } else if (id == R.id.nav_upcoming) {
+
+        } else if (id == R.id.nav_search) {
 //
 //        } else if (id == R.id.nav_manage) {
 //
@@ -81,8 +94,7 @@ public class MainActivity extends AppCompatActivity
 //
 //        } else if (id == R.id.nav_send) {
 //
-//        }
-
+        }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;

@@ -3,6 +3,7 @@ package com.example.muhtadi.cataloguemovieuiux.Adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,7 +26,7 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     private Context context;
     private RecyclerViewItemClickListener recyclerViewItemClickListener;
 
-    MovieAdapter(List<MoviePOJO.ResultArray> movieListResult, int tampilanList, Context context) {
+    public MovieAdapter(List<MoviePOJO.ResultArray> movieListResult, int tampilanList, Context context) {
         this.movieListResult = movieListResult;
         this.tampilanList = tampilanList;
         this.context = context;
@@ -93,6 +94,7 @@ public class MovieAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
     static class mViewHolder extends RecyclerView.ViewHolder{
 
         LinearLayout linearLayout;
+        ConstraintLayout constraintLayout;
         ImageView imageView;
         TextView tvTitle, tvVote, tvRelease;
 
