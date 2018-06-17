@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">CatalogueMovieUiUx</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Muhtadi Irfan</string>
+    <string name="nav_header_subtitle">muhtadi.irfan@gmail.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="search">Search</string>
+</resources>
